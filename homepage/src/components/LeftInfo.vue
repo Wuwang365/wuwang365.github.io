@@ -27,7 +27,6 @@ import 'bootstrap/dist/js/bootstrap.min.js';
             </p>
         </div>
     </div>
-    <span class="placehold"></span>
 </template>
 
 <style scoped>
@@ -43,15 +42,16 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 .card_redef {
     border-radius: 0%;
-    position: fixed;
+    position: sticky;
     padding-top: 5%;
     padding-left: 1%;
     padding-right: 1%;
     text-align: center;
     border: none;
-    width: 15%;
+    width: 30%;
     height: 100%;
     background-color: rgb(6, 199, 135);
+    display: inline-block;
 }
 
 .name-style {
@@ -64,17 +64,5 @@ import 'bootstrap/dist/js/bootstrap.min.js';
     color: white;
     font-size: 100%;
     font-weight: 800;
-}
-
-.placehold{
-    border-radius: 0%;
-    padding-top: 5%;
-    padding-left: 1%;
-    padding-right: 1%;
-    text-align: center;
-    border: none;
-    width: 30%;
-    display: inline-block;
-    /* height: 100%; */
 }
 </style>

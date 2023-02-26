@@ -8,7 +8,7 @@ import "bootstrap/dist/js/bootstrap.min.js"
     <div class="info-label">
       Publication
     </div>
-    <div class="card mb-3">
+    <div class="card mb-3 card_limit">
       <img src="../assets/adaenlight.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><a href="https://dl.acm.org/doi/abs/10.1145/3569464">AdaEnlight: Energy-aware Low-light Video Stream Enhancement on Mobile Devices</a></h5>
@@ -28,11 +28,12 @@ import "bootstrap/dist/js/bootstrap.min.js"
 <style scoped>
 .info-block {
   display: inline-block;
-  width: 70%;
-  height: 100%;
+  width: 69%;
+  /* height: 100%; */
   padding-left: 5%;
   padding-top: 5%;
   padding-right: 5%;
+  vertical-align: top;
 }
 
 .info-label {
@@ -64,5 +65,9 @@ import "bootstrap/dist/js/bootstrap.min.js"
 a{
   text-decoration:none;
 color: #000;
+}
+
+.card_limit{
+  max-width: 100%;
 }
 </style>
