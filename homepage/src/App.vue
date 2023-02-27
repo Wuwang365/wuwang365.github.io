@@ -1,13 +1,22 @@
 <script setup lang="ts">
 
 import { reactive } from 'vue'
-import HelloWorld from './components/Infos.vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import Info from "./components/Infos.vue"
 import LeftInfo from './components/LeftInfo.vue';
-import 'jquery';
 
-const margin_control = reactive({marginLeft:"0%",marginRight:"0%"})
+var changeBlank = function () {
+  var width = document.documentElement.clientWidth;
+  var height = document.documentElement.clientHeight;
+  var percent:number = 0.7
+  var extraWidth = (width - percent * height) > 0 ? (width - percent * height) : 0
+  var margin_percent = extraWidth / 2 / width
+  let margin_percent_str:string = (margin_percent*100).toString()+"%"
+  return margin_percent_str
+}
+
+
+const margin_control = reactive({marginLeft:changeBlank(),marginRight:changeBlank()})
 
 
 window.onload = function () {
@@ -18,16 +27,7 @@ window.onresize = function () {
   margin_control.marginLeft = changeBlank()
   margin_control.marginRight = changeBlank()
 }
-var changeBlank = function () {
-  var width = document.documentElement.clientWidth;
-  var height = document.documentElement.clientHeight;
-  var percent:number = 0.7
-  var extraWidth = (width - percent * height) > 0 ? (width - percent * height) : 0
-  var margin_percent = extraWidth / 2 / width
-  console.log(margin_percent)
-  let margin_percent_str:string = (margin_percent*100).toString()+"%"
-  return margin_percent_str
-}
+
 </script>
 
 <template>
@@ -41,6 +41,6 @@ var changeBlank = function () {
 <style scoped>
 .main-redef {
   background-color: white;
-  height: 100%;
+  min-height: 100%;
 }
 </style>

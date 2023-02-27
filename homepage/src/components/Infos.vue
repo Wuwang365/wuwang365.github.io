@@ -8,6 +8,8 @@ import "bootstrap/dist/js/bootstrap.min.js"
     <div class="info-label">
       Publication
     </div>
+
+
     <div class="card mb-3 card_limit">
       <img src="../assets/adaenlight.png" class="card-img-top" alt="...">
       <div class="card-body">
@@ -18,9 +20,8 @@ import "bootstrap/dist/js/bootstrap.min.js"
           </span></p>
       </div>
     </div>
-    <div class="info-content">
+    
 
-    </div>
     <div class="authors"></div>
   </div>
 </template>
@@ -29,7 +30,6 @@ import "bootstrap/dist/js/bootstrap.min.js"
 .info-block {
   display: inline-block;
   width: 69%;
-  /* height: 100%; */
   padding-left: 5%;
   padding-top: 5%;
   padding-right: 5%;
@@ -42,11 +42,6 @@ import "bootstrap/dist/js/bootstrap.min.js"
   font-style: "Arial";
 }
 
-.info-content {
-  font-weight: 800;
-  font-size: 100%;
-  font-style: "Arial";
-}
 
 .authors {
   font-weight: 400;
