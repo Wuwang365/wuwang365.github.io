@@ -8,11 +8,11 @@ var getHeight = function () {
     console.log(height)
     return height.toString() + "px"
 }
-var changeHeight = function(){
+var changeHeight = function(ev:Event){
     height_control.height = getHeight();
  }
- window.onresize = changeHeight;
- window.onload = changeHeight;
+ window.addEventListener("resize",changeHeight);
+ window.addEventListener("load",changeHeight);
 
 var height_control = reactive({ height: getHeight() })
 </script>
