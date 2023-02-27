@@ -43,4 +43,11 @@ window.onresize = function () {
   background-color: white;
   min-height: 100%;
 }
+body {
+      min-height:100%;
+      background-color:gray;
+      background:url(./assets/IMG_4179.JPG) no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
 </style>
